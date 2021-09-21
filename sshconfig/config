@@ -1,0 +1,15 @@
+Host port-forwards
+  # Private key location
+  IdentityFile ~/.ssh/id_rsa
+  # Remote host and user
+  Hostname 10.2.3.4
+  User username
+  # Remote ports to fwd to local network
+  LocalForward PORT_1 localhost:PORT_1
+  LocalForward PORT_2 localhost:PORT_2
+  LocalForward PORT_3 localhost:PORT_3
+  LocalForward PORT_4 localhost:PORT_4
+  # Local ports to fwd to remote network
+  #RemoteForward REMOTEPORT_1 localhost:PORT_1
+  #RemoteForward REMOTEPORT_2 localhost:PORT_2
+  #RemoteForward REMOTEPORT_3 localhost:PORT_3
