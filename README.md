@@ -1,4 +1,4 @@
-# Docker SH Tunnel
+# Docker SSH Tunnel
 Docker SSH Tunnel
 
 Sets up a port forwarding SSH tunnel for one or multiple ports, on one or any number of hosts. Configuration via docker-compose could look like this:

@@ -2,7 +2,7 @@ version: '3'
 
 services:
   sshtunnel:
-    image: frysee/sshtunnel
+    image: ghcr.io/frysee/sshtunnel
     container_name: sshtunnel
     restart: unless-stopped
     volumes:
