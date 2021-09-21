@@ -4,13 +4,8 @@ services:
   sshtunnel:
     image: frysee/sshtunnel
     container_name: sshtunnel
+    restart: unless-stopped
     volumes:
-      - ./config:/root/.ssh:ro
-    environment:
-      - TUNNEL_HOST=host.example.com
-      - TUNNEL_PORT=22
-      - REMOTE_HOST=localhost
-      - LOCAL_PORT=2525
-      - REMOTE_PORT=25
-      - KEY=/data/keyfile
-    restart: always
+      - ./sshconfig:/root/ssh:ro
+    ports:
+      - 8081:8081
