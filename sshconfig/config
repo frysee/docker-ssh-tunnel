@@ -5,10 +5,12 @@ Host port-forwards
   Hostname 10.2.3.4
   User username
   # Remote ports to fwd to local network
-  LocalForward PORT_1 localhost:PORT_1
-  LocalForward PORT_2 localhost:PORT_2
-  LocalForward PORT_3 localhost:PORT_3
-  LocalForward PORT_4 localhost:PORT_4
+  # attention: we are binding to "*" here to allow
+  # other services access to the tunnel.
+  LocalForward *.PORT_1 localhost:PORT_1
+  LocalForward *.PORT_2 localhost:PORT_2
+  LocalForward *.PORT_3 localhost:PORT_3
+  LocalForward *.PORT_4 localhost:PORT_4
   # Local ports to fwd to remote network
   #RemoteForward REMOTEPORT_1 localhost:PORT_1
   #RemoteForward REMOTEPORT_2 localhost:PORT_2

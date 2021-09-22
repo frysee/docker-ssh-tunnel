@@ -7,5 +7,6 @@ services:
     restart: unless-stopped
     volumes:
       - ./sshconfig:/root/ssh:ro
+    # only necessary if you want to use the tunnel from the host side
     ports:
       - 8081:8081
